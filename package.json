@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "kafka:up": "docker compose up -d --wait",
+    "kafka:stop": "docker compose down",
+    "setup": "node setup-topics.js",
+    "producer": "node producer.js",
+    "consumer": "node consumer.js",
+    "dlq": "node dlq-consumer.js"
   },
   "keywords": [],
   "author": "",
